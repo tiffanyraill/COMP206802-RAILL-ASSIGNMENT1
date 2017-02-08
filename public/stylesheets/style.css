@@ -1,4 +1,9 @@
-body {
+/*@Assignment1
+ Tiffany Raill 200264388
+ http://tiffany-raill-portfolio.azurewebsites.net/
+ this is the css stylesheet for my Portfolio
+ */
+body {*
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
