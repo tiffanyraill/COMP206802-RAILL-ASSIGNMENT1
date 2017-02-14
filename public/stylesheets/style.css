@@ -5,28 +5,43 @@
  */
 body {
   padding-top: 50px;
-  font-family:  'Grand Hotel', cursive;
-  color: ghostwhite;
-  font-size: 80px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-color: #0f0f0f;
 }
 
-p {
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+#homePage{
+  background: url(Winnipeg2.png) no-repeat center center fixed;
+  background-size: 100% 100%;
+  background-color: black;
+}
+.homePageTitle{
+  font-family: 'Grand Hotel', cursive;
+  color: ghostwhite;
+  font-size: 80px;
+}
+#homePage div {
+  padding: 150px;
+  display: block;
+  margin: 0 auto;
   font-family: 'Grand Hotel', cursive;
   color: ghostwhite;
   font-size: 40px;
-}
-.main-wrapper {
-  width: 100vw;
-  height: 100%;
 }
 #projects{
   background: url(keyboard.png) no-repeat center center fixed;
   background-size: 100% 100%;
   background-color: black;
+  font-family: 'Grand Hotel', cursive;
+  color: ghostwhite;
+  font-size: 40px;
 }
 .carousel-caption {
   height: 300px;
@@ -51,19 +66,24 @@ p {
 
 }
 #aboutMe{
-  background: url(image3.jpg) no-repeat center center fixed;
+  background: url(beautiful.jpg) no-repeat center center fixed;
   background-size: 100% 100%;
   background-color: black;
 }
+
 .aboutMeTitle{
   font-family: 'Grand Hotel', cursive;
   color: ghostwhite;
-  font-size: 60px;
+  font-size: 80px;
 }
 #aboutMe div  {
   text-align: center;
   display: block;
   margin: 0 auto;
+  font-family: 'Grand Hotel', cursive;
+  color: ghostwhite;
+  font-size: 40px;
+  text-shadow: 3px 2px crimson;
 }
 
 .person {
