@@ -3,40 +3,59 @@
  http://tiffany-raill-portfolio.azurewebsites.net/
  this is the css stylesheet for my Portfolio
  */
-body {*
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body {
+  padding-top: 50px;
+  font-family:  'Grand Hotel', cursive;
+  color: ghostwhite;
+  font-size: 80px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-a {
-  color: #00B7FF;
-}
 h1 {
-  font-family: 'PokemonGB', "Harlow Solid Italic";
+  font-family:  'Grand Hotel', cursive;
+  color: white;
+}
+.main-wrapper {
+  width: 100vw;
+  height: 100%;
+}
+#projects{
+  /*background: url("./images.jpeg");*/
 
 }
-/* Add a dark background color with a little bit see-through */
-mynavbar {
-  margin-bottom: 0;
-  background-color: #2d2d30;
-  border: 0;
-  font-size: 11px !important;
-  letter-spacing: 4px;
-  opacity:0.9;
+
+.aboutMeTitle{
+  font-family: 'Grand Hotel', cursive;
+  color: ghostwhite;
+  font-size: 60px;
+}
+#aboutMe{
+  background: url(image3.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
+  background-color: black;
 }
 
-/* Add a gray color to all navbar links */
-navbar li a, navbar navbar-brand {
-  color: #00B7FF;
+#aboutMe div  {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
-/* On hover, the links will turn white */
-navbar-nav li a:hover {
-  color: #fff !important;
+.person {
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: 80%;
 }
 
-/* The active link */
-navbar-nav li.active a {
-  color: #fff !important;
-  background-color:#29292c !important;
+p {
+  font-family: 'Grand Hotel', cursive;
+  color: ghostwhite;
+  font-size: 40px;
+}
+.person:hover {
+  border-color: #f1f1f1;
 }
