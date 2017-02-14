@@ -1,3 +1,36 @@
+<!--@Assignment1-->
+<!--Tiffany Raill 200264388-->
+<!--http://tiffany-raill-portfolio.azurewebsites.net/-->
+<!--this is the Services Page for my Portfolio-->
 <% include ./partials/header.ejs %>
-<h1>Services </h1>
+<div class="main-wrapper" id="servicesPage">
+    <div class="container text-center">
+        <h1 class="servicesPageTitle">Services Available</h1>
+        <br>
+        <p>Computer Programmer ☆ Computer Systems Technician Networking</p>
+    </div>
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="stylesheets/Network.png" alt="network setup" width="300" height="200">
+                <p><strong>Home Network</strong></p>
+                <p>Set up Wifi at Home!</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="stylesheets/parental.png" alt="Parental Controls" width="300" height="200">
+                <p><strong>Parental Controls</strong></p>
+                <p>Content Control for Your Whole Network</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="stylesheets/repair2.png" alt="Smashed Phone" width="300" height="200">
+                <p><strong>Mobile Phone Screen Repair</strong></p>
+                <p>Replace your Smashed Screen</p>
+            </div>
+        </div>
+    </div>
+</div>
 <% include ./partials/footer.ejs %>

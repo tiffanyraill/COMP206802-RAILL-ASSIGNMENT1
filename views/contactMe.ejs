@@ -1,3 +1,36 @@
+<!--@Assignment1-->
+<!--Tiffany Raill 200264388-->
+<!--http://tiffany-raill-portfolio.azurewebsites.net/-->
+<!--this is the Contact Me Page for my Portfolio-->
 <% include ./partials/header.ejs %>
-<h1>Contact Me </h1>
+<!-- Container (Contact Section) -->
+<div class="main-wrapper" id="contactMe" >
+<div class="container-fluid bg-grey">
+    <h1 class="contactMeTitle text-left">Let's Get in Touch!</h1>
+    <div class="row">
+        <div class="col-sm-5">
+            <p>I'd LOVE to hear from You!</p>
+            <p><span class="fa fa-map-signs"></span> Barrie, ON</p>
+            <p><span class="fa fa-phone"></span> 1.705.773.2624</p>
+            <p><span class="fa fa-envelope-o"></span> tiffany.raill@mygeorgian.ca</p>
+        </div>
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <button class="btn btn-default pull-right" type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 <% include ./partials/footer.ejs %>

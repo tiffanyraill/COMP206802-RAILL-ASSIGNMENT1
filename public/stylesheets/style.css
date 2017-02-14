@@ -3,6 +3,19 @@
  http://tiffany-raill-portfolio.azurewebsites.net/
  this is the css stylesheet for my Portfolio
  */
+#myNavbar {
+  padding-right: 20px;
+}
+
+#navbarTitle {
+  /*font-family:'Monsieur La Doulaise', cursive;*/
+  font-family: "Times New Roman", Serif ;
+  font-size: 18px;
+}
+#navLinks {
+  font-family:'Grand Hotel', cursive;
+  font-size: 16px;
+}
 body {
   padding-top: 50px;
   -webkit-background-size: cover;
@@ -26,6 +39,7 @@ body {
   font-family: 'Grand Hotel', cursive;
   color: ghostwhite;
   font-size: 80px;
+  text-shadow: 3px 2px black;
 }
 #homePage div {
   padding: 150px;
@@ -65,6 +79,37 @@ body {
   margin: 0 auto;
 
 }
+#servicesPage {
+  background: url(appleService.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
+  background-color: black;
+}
+.servicesPageTitle{
+  font-family: 'Grand Hotel', cursive;
+  font-size: 80px;
+}
+#servicesPage div  {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-size: 30px;
+  text-shadow: 3px 2px ghostwhite;
+}
+.thumbnail {
+  padding: 0 0 15px 0;
+  border-radius: 0;
+  background-color: #0f0f0f;
+  border: 10px solid transparent;
+  opacity: 0.7;
+}
+
+.thumbnail p {
+  margin-top: 15px;
+  color: black;
+  font-size: 20px;
+}
 #aboutMe{
   background: url(beautiful.jpg) no-repeat center center fixed;
   background-size: 100% 100%;
@@ -73,17 +118,17 @@ body {
 
 .aboutMeTitle{
   font-family: 'Grand Hotel', cursive;
-  color: ghostwhite;
+  color: whitesmoke;
   font-size: 80px;
 }
 #aboutMe div  {
   text-align: center;
   display: block;
   margin: 0 auto;
-  font-family: 'Grand Hotel', cursive;
-  color: ghostwhite;
-  font-size: 40px;
-  text-shadow: 3px 2px crimson;
+  font-family: 'Raleway', sans-serif;
+  color: whitesmoke;
+  font-size: 45px;
+  text-shadow: 3px 2px #555555;
 }
 
 .person {
@@ -95,4 +140,24 @@ body {
 
 .person:hover {
   border-color: #f1f1f1;
+}
+#contactMe{
+  background: url(vintagePhone.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
+  background-color: black;
+}
+.contactMeTitle {
+  padding: 50px;
+  font-family: 'Grand Hotel', cursive;
+  color: whitesmoke;
+  font-size: 80px;
+}
+#contactMe div  {
+  text-align: center;
+  /*display: block;*/
+  /*margin: 0 auto;*/
+  font-family: 'Raleway', sans-serif;
+  color: whitesmoke;
+  font-size: 20px;
+  text-shadow: 2px 2px #555555;
 }
