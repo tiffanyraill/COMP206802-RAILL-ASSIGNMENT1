@@ -161,3 +161,11 @@ body {
   font-size: 20px;
   text-shadow: 2px 2px #555555;
 }
+#socialMedia {
+  margin: 0 auto;
+}
+.linksTitle {
+  font-family: 'Raleway', sans-serif;
+  color: whitesmoke;
+  font-size: 20px;
+}
