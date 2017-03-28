@@ -179,5 +179,81 @@ body {
   font-family: 'Grand Hotel', cursive;
   color: whitesmoke;
   font-size: 80px;
+  text-shadow: 2px 2px black;
+}
+#addPaperLink{
+  font-family: 'Grand Hotel', cursive;
+  color: red;
+  font-size: 20px;
   text-shadow: 2px 2px #555555;
+}
+table {
+  opacity: 0.9;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  border-bottom: 1px solid #ddd;
+  background-color: antiquewhite;
+  color: black;
+}
+
+tr:hover{background-color:white}
+
+#addPaper {
+  background: url(typewriter.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
+  background-color: black;
+  /*text-align: left;*/
+  /*display: block;*/
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+  color: ghostwhite;
+  font-size: 25px;
+  text-shadow: 2px 2px black;
+  padding-left: 100px;
+}
+#addPaper h1{
+  font-family: 'Grand Hotel', cursive;
+  color: black;
+  font-size: 60px;
+  text-shadow: 2px 2px ghostwhite;
+  padding-top: 30px;
+}
+#title, #course, #description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: black;
+  width: 300px;
+}
+#editPaper {
+  background: url(typewriter.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
+  background-color: black;
+  /*text-align: left;*/
+  /*display: block;*/
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+  color: ghostwhite;
+  font-size: 25px;
+  text-shadow: 2px 2px black;
+  padding-left: 100px;
+}
+#editPaper h1{
+  font-family: 'Grand Hotel', cursive;
+  color: black;
+  font-size: 60px;
+  text-shadow: 2px 2px ghostwhite;
+  padding-top: 30px;
+}
+#title, #course, #description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: black;
+  width: 300px;
 }

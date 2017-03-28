@@ -1,25 +1,26 @@
 <% include ../partials/header.ejs %>
 
-<main class="container">
+<div class="main-wrapper"  id="addPaper">
+<div class="container">
 
   <h1>Academic Research Paper Details</h1>
-
+</br>
   <form method="post">
     <div class="form-group">
       <label for="title" class="col-sm-2 control-label">Title: *</label>
-      <input name="title" id="title" required />
+      <input name="title" placeholder="Paper Title" id="title" required />
     </div>
     <div class="form-group">
       <label for="course" class="col-sm-2 control-label">Course: *</label>
-      <input name="course" id="course" required />
+      <input name="course" placeholder="Course Name"id="course" required />
     </div>
     <div class="form-group">
       <label for="description" class="col-sm-2 control-label">Description:</label>
-      <input name="description" id="description" required />
+      <input name="description" placeholder="Description of Paper" id="description" required />
     </div>
     <button class="btn btn-success col-sm-offset-2">Save</button>
   </form>
 
-</main>
-
+</div>
+</div>
 <% include ../partials/footer.ejs %>
