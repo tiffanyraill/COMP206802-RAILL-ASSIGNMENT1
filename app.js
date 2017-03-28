@@ -7,8 +7,18 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var papers = require('./routes/papers');
 
 var app = express();
+
+// use mongoose to connect to mongodb
+var mongoose = require('mongoose');
+var conn = mongoose.connection;
+
+// link to config file
+var globals = require('./config/globals');
+
+conn.open(globals.db);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/papers', papers); // handle all requests at /papers with papers router
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

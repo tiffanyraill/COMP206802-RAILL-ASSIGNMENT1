@@ -23,11 +23,6 @@ router.get('/Projects', function(req, res, next) {
     //load the Projects.ejs view
     res.render('Projects');
 });
-/*GET Papers */
-router.get('/papers', function(req, res, next) {
-    //load the Papers.ejs view
-    res.render('papers');
-});
 /*GET Services */
 router.get('/Services', function(req, res, next) {
     //load the Services .ejs view

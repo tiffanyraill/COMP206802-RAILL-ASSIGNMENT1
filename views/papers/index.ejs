@@ -1,0 +1,32 @@
+<!--@Assignment1-->
+<!--Tiffany Raill 200264388-->
+<!--http://tiffany-raill-portfolio.azurewebsites.net/-->
+<!--this is the About me Page for my Portfolio-->
+<% include ../partials/header.ejs %>
+
+<div class="main-wrapper" id="papers" >
+  <div class="container text-center">
+  <h1 class="papersTitle text-left">Academic Research Papers</h1>
+  </div>
+  <a href="/papers/add">Add a New Research Paper</a>
+
+  <table class="table table-striped table-hover">
+    <tr><th>Title</th><th>Course</th><th>Description</th><th>Actions</th></tr>
+
+      <% for (var i = 0; i < papers.length; i++) { %>
+    <tr>
+      <td><%= papers[i].title %></td>
+      <td><%= papers[i].course %></td>
+      <td><%= papers[i].description %></td>
+      <td>
+        <a href="/papers/<%= papers[i]._id %>" class="btn btn-info">View</a>
+        <a href="/papers/<%= papers[i]._id %>" class="btn btn-info">Edit</a>
+        <a href="/papers/delete/<%= papers[i]._id %>" class="btn btn-danger confirmation">Delete</a>
+      </td>
+    </tr>
+      <% } %>
+
+  </table>
+
+</div>
+<% include ../partials/footer.ejs %>
