@@ -4,6 +4,7 @@
 <!--this is the Contact Me Page for my Portfolio-->
 <% include ./partials/header.ejs %>
 <!-- Container (Contact Section) -->
+
 <div class="main-wrapper" id="contactMe" >
 <div class="container-fluid bg-grey">
     <h1 class="contactMeTitle text-left">Let's Get in Touch!</h1>
@@ -26,13 +27,14 @@
             <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
             <div class="row">
                 <div class="col-sm-12 form-group">
-                    <button class="btn btn-default pull-right" type="submit">Send</button>
+                    <button id="send_email" class="btn btn-default pull-right"  type="submit">Send</button>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
-    <<div class="col-sm-5" id="socialMedia">
+    <div class="col-sm-5" id="socialMedia">
         <h3 class="linksTitle">Learn More About Me!</h3>
         <br>
             <a href="https://www.pinterest.com/tiffanyraill/"><img src="stylesheets/pinterestLogo.png" alt="Pinterest logo" width="50" height="50"/>
@@ -42,4 +44,5 @@
             <a href="https://www.facebook.com/tiffany.raill"><img src="stylesheets/facebookLogo.png" alt="Facebook Logo" width="50" height="50"/>
             </a>
 </div><!--end row-->
+</div>
 <% include ./partials/footer.ejs %>

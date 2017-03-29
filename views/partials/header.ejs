@@ -14,6 +14,23 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
   <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css" />
+  <script>
+      $(document).ready(function(){
+          var from,name,email,comments;
+          $("#send_email").click(function(){
+              name=$("#name").val();
+              email=$("#email").val();
+              text=$("#comments").val();
+              $("#message").text("Sending E-mail...Please wait");
+              $.get("http://localhost:3000/send",{name:name,email:email,comments:comments},function(data){
+                  if(data=="sent")
+                  {
+                      $("#message").empty().html("Email is been sent at "+name+" . Please check inbox!");
+                  }
+              });
+          });
+      });
+  </script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" id="myNavbar">

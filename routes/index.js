@@ -18,6 +18,7 @@ router.get('/contactMe', function(req, res, next) {
     //load the contactMe.ejs view
     res.render('contactMe');
 });
+
 /*GET Projects */
 router.get('/Projects', function(req, res, next) {
     //load the Projects.ejs view
