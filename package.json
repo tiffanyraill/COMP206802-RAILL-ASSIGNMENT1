@@ -12,6 +12,7 @@
     "debug": "~2.6.0",
     "ejs": "~2.5.5",
     "express": "~4.14.1",
+    "express-session": "^1.15.2",
     "morgan": "~1.7.0",
     "nodemailer": "^3.1.8",
     "nodemailer-direct-transport": "^3.3.2",
@@ -19,6 +20,10 @@
     "nodemailer-shared": "^2.0.0",
     "nodemailer-smtp-transport": "^2.7.2",
     "nodemailer-wellknown": "^0.2.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0",
+    "passport-outlook": "^2.1.0",
     "serve-favicon": "~2.3.2"
   }
 }
