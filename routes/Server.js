@@ -3,46 +3,50 @@
  */
 var express=require('express');
 var nodemailer = require("nodemailer");
-var app=express();
+var router = express.Router();
 /*
  Here we are configuring our SMTP Server details.
- STMP is mail server which is responsible for sending and recieving email.
+ SMTP is mail server which is responsible for sending and receiving email.
  */
 var smtpTransport = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
     auth: {
-        user: '',
-        pass: ''
+        user: 'tiffanytmuma@gmail.com',
+        pass: 'Theodorah16'
     }
 });
 /*------------------SMTP Over-----------------------------*/
 
 /*------------------Routing Started ------------------------*/
 
-app.get('/',function(req,res){
+router.get('/',function(req,res){
     res.sendfile('contactMe.ejs');
 });
-app.get('/send',function(req,res){
+router.post('/send',function(req,res){
+    console.log(req.body)
     var mailOptions={
-        name : req.query.name,
-        email : req.query.email,
-        text : req.query.comments
+        name: req.body.name,
+        to: 'tiffanytmuma@gmail.com',
+        email: req.body.email,
+        text: req.body.comments
     };
     console.log(mailOptions);
     smtpTransport.sendMail(mailOptions, function(error, response){
         if(error){
             console.log(error);
-            res.end("error");
+            res.render('contactMe', {
+                    message: 'Error - Email not sent'
+                }
+            );
         }else{
             console.log("Message sent: " + response.message);
-            res.end("sent");
+            res.render('contactMe', {
+                    message: 'Message Sent!'
+                }
+            );
         }
     });
 });
 
-/*--------------------Routing Over----------------------------*/
-
-app.listen(3000,function(){
-    console.log("Express Started on Port 3000");
-});
+module.exports = router;

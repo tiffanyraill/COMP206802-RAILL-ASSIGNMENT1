@@ -3,9 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'My Portfolio',
-  message: 'COMPUTER PROGRAMMER ☆ COMPUTER SYSTEMS TECHNICIAN NETWORKING'
-  });
+    res.render('index', { title: 'My Portfolio',
+        message: 'COMPUTER PROGRAMMER ☆ COMPUTER SYSTEMS TECHNICIAN NETWORKING'
+    });
 });
 
 /*GET aboutMe */
@@ -16,7 +16,7 @@ router.get('/aboutMe', function(req, res, next) {
 /*GET contactMe */
 router.get('/contactMe', function(req, res, next) {
     //load the contactMe.ejs view
-    res.render('contactMe');
+    res.render('contactMe', {message: ''});
 });
 
 /*GET Projects */
@@ -29,4 +29,5 @@ router.get('/Services', function(req, res, next) {
     //load the Services .ejs view
     res.render('Services');
 });
+
 module.exports = router;

@@ -4,13 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var nodemailer = require("nodemailer");
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 var papers = require('./routes/papers');
-var Server = require('./routes/Server');
-
+var server = require('./routes/server')
 
 var app = express();
 
@@ -36,6 +35,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/', server);
+
 app.use('/users', users);
 app.use('/papers', papers); // handle all requests at /papers with papers router
 

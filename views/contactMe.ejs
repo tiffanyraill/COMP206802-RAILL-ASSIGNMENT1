@@ -6,43 +6,45 @@
 <!-- Container (Contact Section) -->
 
 <div class="main-wrapper" id="contactMe" >
-<div class="container-fluid bg-grey">
-    <h1 class="contactMeTitle text-left">Let's Get in Touch!</h1>
-    <div class="row">
-        <div class="col-sm-5">
-            <p>I'd LOVE to hear from You!</p>
-            <p><span class="fa fa-map-signs"></span> Barrie, ON</p>
-            <p><span class="fa fa-phone"></span> 1.705.773.2624</p>
-            <p><span class="fa fa-envelope-o"></span> tiffany.raill@mygeorgian.ca</p>
-        </div>
-        <div class="col-sm-7">
-            <div class="row">
-                <div class="col-sm-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                </div>
-                <div class="col-sm-6 form-group">
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                </div>
+    <div class="container-fluid bg-grey">
+        <h1 class="contactMeTitle text-left">Let's Get in Touch!</h1>
+        <div class="row">
+            <div class="col-sm-5">
+                <p>I'd LOVE to hear from You!</p>
+                <p><span class="fa fa-map-signs"></span> Barrie, ON</p>
+                <p><span class="fa fa-phone"></span> 1.705.773.2624</p>
+                <p><span class="fa fa-envelope-o"></span> tiffany.raill@mygeorgian.ca</p>
             </div>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-            <div class="row">
-                <div class="col-sm-12 form-group">
-                    <button id="send_email" class="btn btn-default pull-right"  type="submit">Send</button>
+            <form class="col-sm-7" action="http://localhost:3000/send" method="POST">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button id="send_email" class="btn btn-default pull-right"  type="submit">Send</button>
+                    </div>
+                </div>
+            </form>
 
-</div>
+                    <p><%= message %></p>
+        </div>
+
+    </div>
     <div class="col-sm-5" id="socialMedia">
         <h3 class="linksTitle">Learn More About Me!</h3>
         <br>
-            <a href="https://www.pinterest.com/tiffanyraill/"><img src="stylesheets/pinterestLogo.png" alt="Pinterest logo" width="50" height="50"/>
-            </a>
-            <a href="https://www.linkedin.com/in/tiffany-raill-555480126"><img src="stylesheets/linkedin.png" alt="linkedin logo" width="50" height="50"/>
-            </a>
-            <a href="https://www.facebook.com/tiffany.raill"><img src="stylesheets/facebookLogo.png" alt="Facebook Logo" width="50" height="50"/>
-            </a>
-</div><!--end row-->
+        <a href="https://www.pinterest.com/tiffanyraill/"><img src="stylesheets/pinterestLogo.png" alt="Pinterest logo" width="50" height="50"/>
+        </a>
+        <a href="https://www.linkedin.com/in/tiffany-raill-555480126"><img src="stylesheets/linkedin.png" alt="linkedin logo" width="50" height="50"/>
+        </a>
+        <a href="https://www.facebook.com/tiffany.raill"><img src="stylesheets/facebookLogo.png" alt="Facebook Logo" width="50" height="50"/>
+        </a>
+    </div><!--end row-->
 </div>
 <% include ./partials/footer.ejs %>
