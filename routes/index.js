@@ -9,21 +9,10 @@ var Account = require('../models/account');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'My Portfolio',
-        message: 'COMPUTER PROGRAMMER ☆ COMPUTER SYSTEMS TECHNICIAN NETWORKING'
+        message: 'COMPUTER PROGRAMMER ☆ COMPUTER SYSTEMS TECHNICIAN NETWORKING',
+        user: req.user
     });
 });
-
-/*GET aboutMe */
-router.get('/aboutMe', function(req, res, next) {
-    //load the aboutMe.ejs view
-    res.render('aboutMe');
-});
-/*GET contactMe */
-router.get('/contactMe', function(req, res, next) {
-    //load the contactMe.ejs view
-    res.render('contactMe', {message: ''});
-});
-
 /* GET register */
 router.get('/register', function(req, res, next) {
     // load the register.ejs view
@@ -48,21 +37,17 @@ router.get('/login', function(req, res, next) {
     });
 });
 
-/*POST register */
-
-router.post('/register', function(req, res, next){
-    //use account model to create a new user account
-    Account.register(new Account({ username: req.body.username }),
-        req.body.password, function(err, account) {
-        if(err)
-        {
-        console.log(err);
-        res.render('error', {title: 'create Account Error'});
+/* POST register */
+router.post('/register', function(req, res, next) {
+    // use the Account model to create a new user account
+    Account.register(new Account({ username: req.body.username }), req.body.password, function(err, account) {
+        if (err) {
+            console.log(err);
+            res.render('error', { title: 'Create Account Error'});
         }
         res.redirect('/login');
-        });
-
     });
+});
 
 /* POST login */
 router.post('/login', passport.authenticate('local', {
@@ -71,23 +56,47 @@ router.post('/login', passport.authenticate('local', {
     failureMessage: 'Invalid Login'
 }));
 
+/*GET aboutMe */
+router.get('/aboutMe', function(req, res, next) {
+    //load the aboutMe.ejs view
+    res.render('aboutMe', {
+        user: req.user
+    });
+});
+/*GET contactMe */
+router.get('/contactMe', function(req, res, next) {
+    //load the contactMe.ejs view
+    res.render('contactMe', {message: '',
+        user: req.user
+    });
+});
+/*GET Projects */
+router.get('/Projects', function(req, res, next) {
+    //load the Projects.ejs view
+    res.render('Projects', {
+        user: req.user
+    });
+});
+/*GET Services */
+router.get('/Services', function(req, res, next) {
+    //load the Services .ejs view
+    res.render('Services', {
+        user: req.user
+        });
+});
+/*GET Papers */
+router.get('/papers/index', function(req, res, next) {
+    //load the papers .ejs view
+    res.render('index', { title: 'papers',
+        user: req.user
+    });
+});
+
 /* GET logout */
 router.get('/logout', function(req, res, next) {
     req.logout();
 
     res.redirect('/');
-});
-
-
-/*GET Projects */
-router.get('/Projects', function(req, res, next) {
-    //load the Projects.ejs view
-    res.render('Projects');
-});
-/*GET Services */
-router.get('/Services', function(req, res, next) {
-    //load the Services .ejs view
-    res.render('Services');
 });
 
 module.exports = router;

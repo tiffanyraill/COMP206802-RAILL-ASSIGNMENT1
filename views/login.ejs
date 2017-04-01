@@ -2,7 +2,12 @@
 
 <main class="container">
     <h1>Login</h1>
-
+    <% if (messages.length > 0) { %>
+    <div class="alert alert-danger"><%= messages %></div>
+    <% }
+    else { %>
+    <div class="alert alert-info">Please enter your Credentials</div>
+    <% } %>
     <form method="post">
         <div class="form-group">
             <label for="username" class="col-sm-2 control-label">Email: *</label>

@@ -17,17 +17,35 @@
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" id="myNavbar">
-  <ul class="nav navbar-nav navbar-right" id="navbarTitle">
-    <li><a href="#">Tiffany T. Raill</a></li>
-  </ul>
+  <!--<ul class="nav navbar-nav navbar-right" id="navbarTitle">-->
+    <!--<li><a href="#">Tiffany T. Raill</a></li>-->
+  <!--</ul>-->
   <ul class="nav navbar-nav navbar-left" id="navLinks" >
     <li><a href="/" class="navbar-brand fa fa-home"> Home</a></li>
-    <li><a href="/register" class = "fa fa-registered"> Register</a></li>
-    <li><a href="/login" class = "fa fa-sign-in"> Login</a></li>
+
+      <% if (!user) { %>
     <li><a href="/Projects" class="fa fa-university"> Projects</a></li>
+    <li><a href="/Papers" class="fa fa-file-text-o"> Academic Research Papers</a></li>
     <li><a href="/Services" class="fa fa-cogs"> Services</a></li>
-      <li><a href="/Papers" class="fa fa-file-text-o"> Academic Research Papers</a></li>
+    <li><a href="/aboutMe" class="fa fa-user-circle-o"> About Me</a></li>
     <li><a href="/contactMe" class="fa fa-phone"> Contact Me</a></li>
-    <li><a class="fa fa-user-circle-o" href="/aboutMe" > About Me</a></li>
   </ul>
+  <ul class="nav navbar-nav navbar-right" id="navbarTitle">
+  <li><a href="/register" class = "fa fa-registered"> Register</a></li>
+  <li><a href="/login" class = "fa fa-sign-in"> Login</a></li>
+  </ul>
+  </div>
+    <% }
+    else { %>
+  <li><a href="/Projects" class="fa fa-university"> Projects</a></li>
+  <li><a href="/Papers" class="fa fa-file-text-o"> Academic Research Papers</a></li>
+  <li><a href="/Services" class="fa fa-cogs"> Services</a></li>
+  <li><a href="/aboutMe" class="fa fa-user-circle-o"> About Me</a></li>
+  <li><a href="/contactMe" class="fa fa-phone"> Contact Me</a></li>
+  <li><a href="/logout" class = "fa fa-sign-out"> Logout</a></li>
+  </ul>
+  <div class="navbar-text pull-right">
+      <%= user.username %>
+  </div>
+    <% } %>
 </nav>

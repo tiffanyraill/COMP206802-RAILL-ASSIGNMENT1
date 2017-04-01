@@ -21,7 +21,8 @@ router.get('/', function(req, res, next) {
         // no error so send the papers to the index view
         res.render('papers/index', {
             papers: papers,
-            title: 'Title'
+            title: 'Title',
+            user: req.user
         });
     });
 });
@@ -30,7 +31,8 @@ router.get('/', function(req, res, next) {
 router.get('/add', function(req, res, next) {
     // show the add form
     res.render('papers/add', {
-        title: 'Paper Description'
+        title: 'Paper Description',
+        user: req.user
     });
 });
 
@@ -67,12 +69,12 @@ router.get('/delete/:_id', function(req, res, next) {
     });
 });
 
-// GET /papers/_id - show edit page and pass it the selected recipe
+// GET /papers/_id - show edit page and pass it the selected paper
 router.get('/:_id', function(req, res, next) {
     // grab id from the url
     var _id = req.params._id;
 
-    // use mongoose to find the selected recipe
+    // use mongoose to find the selected paper
     Paper.findById(_id, function(err, paper) {
         if (err) {
             console.log(err);
@@ -82,7 +84,8 @@ router.get('/:_id', function(req, res, next) {
         res.render('papers/edit', {
             paper: paper,
             course: 'Course',
-            description: 'Description'
+            description: 'Description',
+            user: req.user
         });
     });
 });
