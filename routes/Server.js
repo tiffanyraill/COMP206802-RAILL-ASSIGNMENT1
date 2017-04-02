@@ -12,8 +12,8 @@ var smtpTransport = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
     auth: {
-        user: 'tiffanytmuma@gmail.com',
-        pass: 'Theodorah16'
+        user: 'tiffanytwheatley@gmail.com',
+        pass: 'temppassword'
     }
 });
 /*------------------SMTP Over-----------------------------*/
@@ -27,7 +27,7 @@ router.post('/send',function(req,res){
     console.log(req.body)
     var mailOptions={
         name: req.body.name,
-        to: 'tiffanytmuma@gmail.com',
+        to: 'tiffanytwheatley@gmail.com',
         email: req.body.email,
         text: req.body.comments
     };
