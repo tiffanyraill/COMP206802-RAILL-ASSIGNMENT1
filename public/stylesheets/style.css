@@ -8,8 +8,12 @@
 }
 
 #navbarTitle {
-  /*font-family:'Monsieur La Doulaise', cursive;*/
+  /*font-family: 'Grand Hotel', cursive;*/
   font-family: "Times New Roman", Serif ;
+  font-size: 16px;
+}
+#navbarTitleName {
+  font-family: 'Grand Hotel', cursive;
   font-size: 18px;
 }
 .ul {
@@ -256,4 +260,59 @@ tr:hover{background-color:white}
   font-size: 14px;
   color: black;
   width: 300px;
+}
+#login {
+  background: url(saloonDoor.jpg) no-repeat center center fixed;
+  /*opacity: 0.9;*/
+  background-size: cover;
+  background-color: black;
+}
+#login h1{
+  font-family: 'Grand Hotel', cursive;
+  color: ghostwhite;
+  font-size: 80px;
+  text-shadow: 2px 2px black;
+  padding-bottom: 30px;
+}
+#login form{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: ghostwhite;
+}
+#login input{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: black;
+}
+#login h3{
+  font-family: 'Grand Hotel', cursive;
+  color: red;
+  font-size: 30px;
+  text-shadow: 2px 2px black;
+  padding-bottom: 20px;
+
+}
+
+#register {
+  background: url(pen.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-color: black;
+}
+#register h1{
+  font-family: 'Grand Hotel', cursive;
+  color: ghostwhite;
+  font-size: 80px;
+  text-shadow: 2px 2px black;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+#register form{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: ghostwhite;
+}
+#register input{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: black;
 }

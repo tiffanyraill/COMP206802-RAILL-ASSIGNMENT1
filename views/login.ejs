@@ -1,12 +1,13 @@
 <% include partials/header.ejs %>
 
+<div class="main-wrapper" id="login">
 <main class="container">
     <h1>Login</h1>
     <% if (messages.length > 0) { %>
     <div class="alert alert-danger"><%= messages %></div>
     <% }
     else { %>
-    <div class="alert alert-info">Please enter your Credentials</div>
+    <h3>Please enter your Credentials or Sign in with Google</h3>
     <% } %>
     <form method="post">
         <div class="form-group">
@@ -22,11 +23,11 @@
             <a href="/google">
                 <img src="/images/googleSignIn.png" width="130px" height="42px" />
             </a>
-        </div>
+
         <hr />
         Need access?  <a href="/register" title="Register">Register</a>
     </form>
 
 </main>
-
+</div>
 <% include partials/footer.ejs %>
