@@ -1,5 +1,8 @@
 /**
  * Created by tiffanyraill on 2017-03-28.
+ * This page is the configuration for email functionality
+ * I have created an email address that the app sends all email to.
+ * It has been tested and is functional. Note: there is no subject line.
  */
 var express=require('express');
 var nodemailer = require("nodemailer");

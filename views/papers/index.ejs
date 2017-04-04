@@ -7,7 +7,8 @@
 <div class="main-wrapper" id="papers" >
   <div class="container text-left">
   <h1 class="papersTitle text-left">Academic Research Papers</h1>
-  <table class="table table-striped table-hover">
+    <div style="width:1100px; height:300px; overflow:scroll;">
+  <table class="table table-striped ">
     <tr><th><h3>Title</h3></th><th><h3>Course</h3></th><th><h3>Description</h3></th>
         <% if (user) { %>
         <th><h3>Actions</h3></th>
@@ -23,6 +24,7 @@
         <!-- this view button will be put into use when I add "upload a document" functionality"
         <!--<a href="/papers/<%= papers[i]._id %>" class="btn btn-info">View</a>-->
         <a href="/papers/<%= papers[i]._id %>" class="btn btn-info">Edit</a>
+        <!-- a modal pops up to confirm yes/no on deletion" -->
         <a href="/papers/delete/<%= papers[i]._id %>" class="btn btn-danger confirmation",
            onclick="return confirm('Are you sure want to delete')";>Delete</a>
       </td>
@@ -30,6 +32,7 @@
     </tr>
       <% } %>
   </table>
+      </div>
       <% if (user) { %>
     <a href="/papers/add" id="addPaperLink">Add a New Research Paper</a>
       <% } %>

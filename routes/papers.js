@@ -57,10 +57,6 @@ router.post('/add', function(req, res, next) {
 router.get('/delete/:_id', function(req, res, next) {
     // get the id parameter from the end of the url
     var _id = req.params._id;
-    // var deleteMessage = req.session.deleteMessage || [];
-    //
-    // // clear messages from session
-    // req.session.deleteMessage = [];
 
     // use Mongoose to delete
     Paper.remove({ _id: _id }, function(err) {

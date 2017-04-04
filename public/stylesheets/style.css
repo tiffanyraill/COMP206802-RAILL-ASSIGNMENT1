@@ -194,9 +194,9 @@ body {
 table {
   opacity: 0.9;
   border-collapse: collapse;
-  width: 100%;
-
+  table-layout:fixed;
 }
+
 
 th, td {
   padding: 5px;
@@ -205,9 +205,10 @@ th, td {
   border-bottom: 1px solid #ddd;
   background-color: antiquewhite;
   color: black;
+  word-wrap:break-word;
 }
 
-tr:hover{background-color:white}
+td:hover{background-color:white}
 
 #addPaper {
   background: url(typewriter.jpg) no-repeat center center fixed;
