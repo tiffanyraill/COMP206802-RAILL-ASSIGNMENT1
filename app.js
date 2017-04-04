@@ -53,6 +53,22 @@ app.use(passport.session());
 var Account = require('./models/account');
 passport.use(Account.createStrategy());
 
+//google auth
+var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
+
+passport.use(new GoogleStrategy({
+        clientID: globals.google.clientID,
+        clientSecret: globals.google.clientSecret,
+        callbackURL: globals.google.callbackURL,
+        passReqToCallback   : true
+    },
+    function(request, accessToken, refreshToken, profile, done) {
+        Account.findOrCreate({ username: profile.emails[0].value }, function (err, user) {
+            return done(err, user);
+        });
+    }
+));
+
 //manage user login status through the database
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
@@ -78,7 +94,8 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error', {
-    title: 'Thank You for Viewing My Portfolio'
+    title: 'Thank You for Viewing My Portfolio',
+      user: req.user
       });
 });
 

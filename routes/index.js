@@ -99,4 +99,17 @@ router.get('/logout', function(req, res, next) {
     res.redirect('/');
 });
 
+/* GET /google -show google login */
+router.get('/google',
+    passport.authenticate('google', { scope:
+        [ 'https://www.googleapis.com/auth/plus.login',
+            , 'https://www.googleapis.com/auth/plus.profile.emails.read' ] }
+    ));
+/* GET /google -callback login and redirect  */
+router.get( '/google/callback',
+    passport.authenticate( 'google', {
+        successRedirect: '/papers',
+        failureRedirect: '/login'
+    }));
+
 module.exports = router;
